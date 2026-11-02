@@ -7,7 +7,7 @@ Date: 2026-11-02 (Asia/Seoul).
 - 5 Python tests passed locally, including real asset SHA256/size integrity, readiness with missing/empty/present assets, entry/security headers, route behavior, and executable-asset MIME types under incorrect host MIME mappings.
 - 16 Node tests passed for game rules, gesture geometry, pinch hysteresis, cooldowns, collision/life/score/restart behavior, continuous gesture holds, and mocked browser/camera controller behavior.
 - HTTP checks confirmed the page, scripts, and stylesheet are served, with JavaScript served as text/javascript. This corrects the startup failure caused by Windows mapping JavaScript to text/plain.
-- The CI workflow is configured to run service tests, Node tests, and script syntax checks without a webcam or large asset downloads. A remote GitHub run is not yet claimed.
+- The CI workflow is configured to run service tests, Node tests, and script syntax checks without a webcam or large asset downloads. The first remote Linux GitHub Actions run passed: https://github.com/TunZawLin/neon-pilot-hw2/actions/runs/41428524477 (commit a7684f2882f82bcc3584f2c5b7f5456a2ce6cc34).
 
 ## User-confirmed manual results
 
@@ -28,3 +28,7 @@ No public hosting or automatic deployment is claimed. GitHub Actions provides au
 ## Clean upload verification
 
 The explicit 25-file upload allowlist was copied into a fresh directory. Its pinned Python dependencies were freshly installed. Before asset setup, four service tests passed and the full checksum check explicitly skipped. The included setup script then downloaded and verified all seven pinned runtime/model/license files; afterward all five Python tests and all sixteen Node tests passed. This clean copy did not rely on the original project folder or its dependency/model files.
+
+## Published source
+
+Public repository: https://github.com/TunZawLin/neon-pilot-hw2 . Source-only main branch publication was verified through GitHub. Installed packages, runtime/model downloads, credentials, and submission evidence are excluded from the repository.
